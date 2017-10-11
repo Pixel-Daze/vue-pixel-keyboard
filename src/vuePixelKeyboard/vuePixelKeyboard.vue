@@ -53,7 +53,7 @@
 <script>
 let timer = null;
 export default {
-    name: 'vue-pay-keyboard',
+    name: 'vuePixelKeyboard',
     props: {
         payTitle: {
             type: String,
@@ -73,11 +73,9 @@ export default {
         },
         keyList: {
         	type:Array,
-        	default:[
-                [1, 2, 3],
-                [4, 5, 6],
-                [7, 8, 9]
-            ]
+        	default:function(){
+                return [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+            }
         }
     },
     data() {
