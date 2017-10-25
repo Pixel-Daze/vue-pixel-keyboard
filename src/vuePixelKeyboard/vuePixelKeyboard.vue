@@ -89,7 +89,7 @@ export default {
     },
     computed: {
         payStatusText() {
-            return this.payStatus ? '支付成功!' : '支付失败,请重输密码!'
+            return this.payStatus ? '交易成功!' : '交易失败,请重输密码!'
         }
     },
     methods: {
