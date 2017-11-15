@@ -27,7 +27,7 @@
                 </div>
                 <div class="item v-1px-t">
                     <div class="key  " style="background: #e8e8e8"></div>
-                    <div class="key v-1px-l" @touchstart="inputStart(0, $event)" @touchend="inputEnd($event)">0
+                    <div class="key v-1px-l" @touchstart="inputStart(0, $event)" @touchend="inputEnd($event)">{{num}}
                     </div>
                     <div class="key v-1px-l" style="background: #e8e8e8" @touchstart="del($event)" @touchend="inputEnd($event,'del')">-
                     </div>
@@ -76,6 +76,9 @@ export default {
         	default:function(){
                 return [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
             }
+        },
+        num: {
+            type:String
         }
     },
     data() {

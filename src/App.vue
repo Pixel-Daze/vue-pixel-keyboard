@@ -3,7 +3,7 @@
     <div class="example">
       <button @click="isPay=true">点击弹出支付键盘</button>
     </div>
-    <vue-pixel-keyboard ref="pay" :is-pay='isPay' @pas-end='pasEnd' @close='isPay=false' :keyList=keyList>
+    <vue-pixel-keyboard ref="pay" :is-pay='isPay' @pas-end='pasEnd' @close='isPay=false' :keyList=keyList :num=num>
     </vue-pixel-keyboard>
   
   </div>
@@ -18,10 +18,11 @@ export default {
     return {
       isPay: false,
       keyList: [
-        [3,4,5],
+        [0,4,5],
         [2,9,1],
         [8,6,7]
-      ]
+      ],
+      num:'3'
     }
   },
   components:{
