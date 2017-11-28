@@ -29,3 +29,5 @@ filename: 'vue-pixel-keyboard.js'
 #### 测试
 entry: './src/main.js'
 filename: 'vue-pixel-keyboard.js'
+
+v 0.0.10 暂时独立支持key-value形式

@@ -21,13 +21,13 @@
             <!--keyboard-->
             <div class="key-box" v-if="keyShow">
                 <div class="item v-1px-t" v-for="(item, i) in keyList" :key="i">
-                    <div class="key" v-for="(val, key) in item" :key="key" @touchstart="inputStart(val, $event)" @touchend="inputEnd($event)" :class="{'v-1px-l':key!=0}">
-                        {{val}}
+                    <div class="key" v-for="(cell, key) in item" :key="key" @touchstart="inputStart(cell.value, $event)" @touchend="inputEnd($event)" :class="{'v-1px-l':key!=0}">
+                        {{cell.key}}
                     </div>
                 </div>
                 <div class="item v-1px-t">
                     <div class="key  " style="background: #e8e8e8"></div>
-                    <div class="key v-1px-l" @touchstart="inputStart(0, $event)" @touchend="inputEnd($event)">{{num}}
+                    <div class="key v-1px-l" @touchstart="inputStart(num.value, $event)" @touchend="inputEnd($event)">{{num.key}}
                     </div>
                     <div class="key v-1px-l" style="background: #e8e8e8" @touchstart="del($event)" @touchend="inputEnd($event,'del')">-
                     </div>
@@ -74,11 +74,16 @@ export default {
         keyList: {
         	type:Array,
         	default:function(){
-                return [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+                return [{key:1,value:1},{key:2,value:2},{key:3,value:3}],
+                [{key:4,value:4},{key:5,value:5},{key:6,value:6}],
+                [{key:7,value:7},{key:8,value:8},{key:9,value:9}]
             }
         },
         num: {
-            type:String
+            type:Object,
+            default:function(){
+                return {key:0,value:0}
+            }
         }
     },
     data() {

@@ -17,12 +17,18 @@ export default {
   data() {
     return {
       isPay: false,
+      // keyList: [
+      //   [0,4,5],
+      //   [2,9,1],
+      //   [8,6,7]
+      // ],
+      // num:'3',
       keyList: [
-        [0,4,5],
-        [2,9,1],
-        [8,6,7]
+        [{key:0,value:1},{key:3,value:2},{key:5,value:3}],
+        [{key:2,value:4},{key:9,value:5},{key:1,value:6}],
+        [{key:8,value:7},{key:6,value:8},{key:7,value:9}]
       ],
-      num:'3'
+      num:{key:4,value:0}
     }
   },
   components:{
